@@ -1,4 +1,5 @@
 import {useEffect} from "react";
+import SearchBox from "./components/Search/SearchBox";
 
 function App() {
   useEffect(() => {
@@ -6,7 +7,8 @@ function App() {
   }, []);
   return (
     <div className="container mt-3">
-      <h1>Hello</h1>
+      <h1 className="text-center">Weather Dashboard</h1>
+      <SearchBox />
     </div>
   );
 }
