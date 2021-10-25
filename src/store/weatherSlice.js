@@ -2,10 +2,16 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const weatherSlice = createSlice({
   name: "weather",
-  initialState: {},
-  reducers: {},
+  initialState: {
+    query: ""
+  },
+  reducers: {
+    setWeatherQuery: (state, action) => {
+      state.query = action.payload;
+    },
+  }
 });
 
-// const { } = weatherSlice.actions;
+export const {setWeatherQuery} = weatherSlice.actions;
 
 export default weatherSlice.reducer;
